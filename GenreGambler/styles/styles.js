@@ -41,6 +41,12 @@ export const styles = StyleSheet.create({
     width:80,
     height:80,
   },
+
+  listButtonImage: {
+    justifyContent:'center',
+    width:120,
+    height:120,
+  },
   buttonRow: {
     marginVertical: 10,
     borderRadius: 50,
@@ -63,6 +69,12 @@ export const styles = StyleSheet.create({
     fontSize: 17,
     margin: 10
   },
+  shuffle_modalText:{
+    alignSelf: 'center',
+    paddingHorizontal: 10,
+    fontSize: 17,
+    margin: 10
+  },
 
   outputBox: {
     flex: 0.4,
@@ -70,5 +82,23 @@ export const styles = StyleSheet.create({
     marginVertical: 10,
     marginHorizontal: 20,
     borderRadius: 10,
+  },
+
+  actionButton:
+  {flex:1, borderRadius: 10, backgroundColor: '#0377BC',},
+
+  artistTitle:{
+    fontSize: 30,
+    fontWeight: 'bold',
+    alignSelf: 'center',
+    paddingHorizontal: 10,
+    margin: 10
+  },
+  albumTitle:{
+    fontSize: 20,
+    fontStyle: 'italic',
+    alignSelf: 'center',
+    paddingHorizontal: 5,
+    margin: 10
   },
 });
