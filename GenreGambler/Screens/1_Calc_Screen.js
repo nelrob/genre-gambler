@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Alert, Image, Modal } from 'react-native';
+import { View, Text, TouchableOpacity, Alert, Image } from 'react-native';
 import { styles } from "../styles/styles";
 
 export function CalcScreen() {
-    // Modal
-    const [modalOpen, setModalOpen] = useState(false)
     // Default icon and title for hybrid output
     const [genre, setGenre] = useState({ icon: require("../assets/default.png"), name: 'Hybrid Genre' })
 
@@ -186,33 +184,6 @@ export function CalcScreen() {
                 <Image source={genre.icon} style={{ alignSelf: 'center', width: 100, height: 100, marginTop: 20 }} />
                 <Text style={{ alignSelf: 'center', fontSize: 30 }}>{genre.name}</Text>
             </View>
-
-            {/* POPUP MODAL - Appears for app's first load*/}
-            <Modal
-                animationType="slide"
-                visible={modalOpen} r
-                style={{
-                    flex: 0.5,
-                    justifyContent: 'center',
-                    alignSelf: 'center',
-                }}
-                transparent>
-
-                <View style={styles.modalContainer}>
-
-                    {/* Close button */}
-                    <TouchableOpacity onPress={() => setModalOpen(false)}>
-                        <Image source={require("../assets/close.png")} style={{ width: 15, height: 15, marginLeft: 10, }} />
-                    </TouchableOpacity>
-
-                    {/* Modal Instructions */}
-                    <Image source={require("../assets/modal_demo.png")} style={{ alignSelf: 'center', marginTop: 20, width: 350, height: 290 }} />
-                    <Text style={styles.modalText}>1. Select two of the genres you want to combine</Text>
-                    <Text style={styles.modalText}>2. Click the "Calculate!" button to see the hybrid genre</Text>
-                    <Text style={styles.modalText}>NOTE: You can't combine two of the same genres.</Text>
-
-                </View>
-            </Modal>
 
         </View>
     )
